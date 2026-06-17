@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+#navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #8e2de2, #ff6ec4);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Scroll Effect */
+#navbar.scrolled{
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+}
+
+/* Logo */
+.logo{
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav-links a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover{
+    background-color: #d9e4e5;
+    color: black;
+    transform: translateY(-2px);
+}
+
+/* Hamburger Icon */
+.menu-toggle{
+    display: none;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Sections */
+.section{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+#home{
+    background: #bfd425;
+}
+
+#about{
+    background: #baa054;
+}
+
+#services{
+    background: #5ece45;
+}
+
+#portfolio{
+    background: #1f92cc;
+}
+
+#contact{
+    background: #641b5b;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px){
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #8e2de2;
+        text-align: center;
+        padding: 15px 0;
+        gap: 15px;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+    .section{
+        font-size: 28px;
+    }
+}
