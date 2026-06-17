@@ -9,15 +9,13 @@ window.addEventListener("scroll", () => {
     }
 });
 
-// Hamburger menu
 const menuToggle = document.getElementById("menu-toggle");
-const navLinks = document.getElementById("nav-links"); // ✅ FIXED
+const navLinks = document.getElementById("nav-links"); 
 
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
 
-// Close menu after clicking a link
 document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", () => {
         navLinks.classList.remove("active");
